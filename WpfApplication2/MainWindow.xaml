@@ -1,0 +1,120 @@
+﻿<Window x:Class="WpfApplication2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="406" Width="904">
+    <Grid Name="GdMain" >
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="282*" />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="632*" />
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Row="1" Grid.RowSpan="2" Margin="222,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <DataGrid CanUserAddRows="True" CanUserResizeColumns="True" AutoGenerateColumns="False" Grid.Row="0" Grid.Column="0" Name="dgResults" Grid.RowSpan="2" Background="#FF688CAF" />
+
+        </Grid>
+        
+        <!---Left panel-->
+        <Grid Name="GdLeftPanel" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,410,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="28" />
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="50" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!---Common Options -Row0 -->
+            <Grid Name="GdCommon" Grid.Column="0" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <CheckBox Grid.Column="0" Grid.Row="0" Margin="10 5 0 0" Name="cbSrchTyp">
+                    Has Picture
+                </CheckBox>
+                <CheckBox Grid.Column="1" Grid.Row="0" Margin="10 5 0 0" Name="cbHasPic">
+                    Title Only
+                </CheckBox>
+
+            </Grid>
+
+            <!---Personals - Row1-->
+            <Grid Name="GdPersonals" Grid.Row="1" Grid.Column="0">
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="106" />
+                    <ColumnDefinition Width="116*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                
+                <Label Margin="5,1,53,4">
+                    Min:
+                </Label>
+
+                <Label Grid.Column="1" Margin="6,2,73,2">
+                    Max:
+                </Label>
+                
+                <TextBox Margin="43,6,13,4"></TextBox>
+                <TextBox Grid.Column="1" Margin="42,6,13,4"></TextBox>
+
+            </Grid>
+            
+            <!---Housing - Row2-->
+            <Grid Name="GdHousing" Grid.Column="0" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Label Margin="5,5,68,0">Min:</Label>
+                <TextBox Margin="39,10,18,8"></TextBox>
+
+                <Label Margin="101,5,81,0" Grid.ColumnSpan="2">Max:</Label>
+                <TextBox Grid.Column="1" Margin="25,10,22,8"></TextBox>
+                
+                <Label Grid.Row="1" Margin="5,0,46,6">Bed:</Label>
+                <TextBox Grid.Row="1" Margin="39,5,18,12"></TextBox>
+
+                <CheckBox Grid.Row="1" Margin="106,7,64,5" Grid.ColumnSpan="2" Content="Cats" />
+                <CheckBox Content="Dogs" Margin="45,7,14,5" Grid.Column="1" Grid.Row="1" />
+            </Grid>
+            
+            
+            <Button Name="BtnSearch" Grid.Row="3" Margin="10 " Click="BtnSearchClick" >
+                Search
+            </Button>
+            
+        </Grid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="90,9,0,0" Name="textBlock1" Text="TextBlock" VerticalAlignment="Top" Width="209" />
+    </Grid>
+
+</Window>

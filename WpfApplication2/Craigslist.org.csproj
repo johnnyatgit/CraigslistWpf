@@ -73,9 +73,6 @@
     <Compile Include="Tags\ST.Personals.cs" />
     <Compile Include="Templates\Xaml.El.cs" />
     <Compile Include="Templates\Xaml.Personals.cs" />
-    <Compile Include="TempWin.xaml.cs">
-      <DependentUpon>TempWin.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\DG.Columns.cs" />
     <Compile Include="View\DG.Items.cs" />
     <Page Include="MainWindow.xaml">
@@ -92,10 +89,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Search.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TempWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
